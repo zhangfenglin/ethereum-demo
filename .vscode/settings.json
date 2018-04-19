@@ -1,0 +1,41 @@
+{
+  "solidity.linter": "solhint",
+  "solidity.solhintRules": {
+    "indent": [
+      "error",
+      4
+    ],
+    "quotes": [
+      "error",
+      "double"
+    ],
+    "max-line-length": [
+      "error",
+      120
+    ],
+    "no-simple-event-func-name": false,
+    "no-empty-blocks": false
+  },
+  "prettier.printWidth": 120,
+  "prettier.arrowParens": "always",
+  "prettier.bracketSpacing": false,
+  "prettier.eslintIntegration": true,
+  "prettier.singleQuote": true,
+  "prettier.tabWidth": 2,
+  "prettier.semi": false,
+  "editor.formatOnSave": true,
+  "eslint.enable": true,
+  "eslint.run": "onType",
+  "eslint.options": {
+    "configFile": ".vscode/eslint/eslintrc.json"
+  },
+  "editor.rulers": [
+    80,
+    120
+  ],
+  "files.exclude": {
+    "**/.git": true,
+    "**/node_modules": true,
+    "**/build": true
+  }
+}
