@@ -25,7 +25,7 @@ LMSR.prototype.getPrice = function getPrice(outcomeIndex) {
 
   const price = dc.dividedBy(dq)
 
-  const minPrice = 0.00001
+  const minPrice = 1e-18
   if (price.isLessThan(minPrice)) {
     return new BigNumber(minPrice)
   }

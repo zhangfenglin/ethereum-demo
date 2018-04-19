@@ -6,15 +6,15 @@
   "dependencies": {
     "bignumber.js": "^6.0.0",
     "config": "^1.30.0",
-    "contracts-build": "git+ssh://git@github.com:BeliefChainOrg/sphinx-contracts-build.git",
     "ethereumjs-util": "^5.1.5",
-    "leveldown": "^3.0.0",
-    "levelup": "^2.0.2",
+    "ethereumjs-wallet": "^0.6.0",
     "mathjs": "^4.1.2",
     "ramda": "^0.25.0",
     "sphinx-meta": "git+ssh://git@github.com:BeliefChainOrg/sphinx-contracts-build.git",
     "truffle-contract": "^3.0.5",
     "truffle-privatekey-provider": "^0.0.6",
-    "web3": "^1.0.0-beta.34"
+    "util": "^0.10.3",
+    "web3": "^0.20.1",
+    "web3-provider-engine": "^8.4.0"
   }
 }
