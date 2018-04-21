@@ -7,7 +7,10 @@
   "license": "GPL-3.0",
   "private": true,
   "dependencies": {
-    "config": "^1.30.0"
+    "bluebird": "^3.5.1",
+    "config": "^1.30.0",
+    "sphinx-meta": "git+ssh://git@github.com:BeliefChainOrg/sphinx-contracts-build.git",
+    "sphinx-truffle-provider": "file:../../work/sphinx-truffle-provider"
   },
   "scripts": {
     "start": "nodemon bin/main.js"

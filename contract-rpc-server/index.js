@@ -30,6 +30,8 @@ class ContractRpcServer extends EventEmitter {
     methods.forEach((method) => {
       const scopeMethod = `${scope}.${method}`
 
+      this.logger.info(scopeMethod)
+
       this.methods[scopeMethod] = async function(args, done) {
         const promise = instance[method].bind(instance, Object.keys(args).map((key) => args[key]))
         try {
