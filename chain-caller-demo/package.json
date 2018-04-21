@@ -1,0 +1,13 @@
+{
+  "name": "chain-caller-demo",
+  "version": "0.0.1",
+  "main": "index.js",
+  "author": "zhangfenglin",
+  "license": "GPL-3.0",
+  "private": true,
+  "dependencies": {
+    "config": "^1.30.0",
+    "sphinx-contract-rpc-client": "/Users/zhangfenglin/Documents/work/sphinx-contract-rpc-client",
+    "web3": "^1.0.0-beta.34"
+  }
+}

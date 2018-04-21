@@ -1,5 +1,4 @@
 const config = require('config')
-const HDWalletProvider = require('truffle-hdwallet-provider')
 const sphinxMeta = require('sphinx-meta')
 const contract = require('../lib/contract')
 const chainConf = config.get('chain')
@@ -12,7 +11,7 @@ const web3 = new Web3()
 
 log(config)
 
-const provider = new HDWalletProvider(chainConf.mnemonic, chainConf.url)
+const provider = new Web3.providers.HttpProvider(chainConf.url)
 const userId = 'FaGyHDysSI9pe0Y'
 const creator = web3.fromUtf8(userId)
 const from = {from: chainConf.coinbase}

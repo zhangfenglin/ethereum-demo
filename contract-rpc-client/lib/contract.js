@@ -48,11 +48,7 @@ class Contract {
           }
         }
 
-        console.log(self.contractInstance.constructor._json.contractName)
-        console.log(args)
-
         self.send(self.contractInstance.constructor._json.contractName, functionName, args, (err, result) => {
-          console.log('result >>>>> : ', result)
           if (err) {
             reject(err)
           } else {

@@ -1,6 +1,6 @@
 module.exports = {
   contractRPC: {
-    serverURL: 'http://localhost:19508'
+    serverURL: 'http://192.168.31.47:19508'
   },
   chain: {
     url: 'http://192.168.31.47:6789',
