@@ -1,0 +1,15 @@
+{
+  "name": "sphinx-contract-rpc-server",
+  "version": "0.0.1",
+  "description": "contract rpc server",
+  "main": "index.js",
+  "author": "zhangfenglin",
+  "license": "GPL-3.0",
+  "private": true,
+  "dependencies": {
+    "config": "^1.30.0"
+  },
+  "scripts": {
+    "start": "nodemon bin/main.js"
+  }
+}

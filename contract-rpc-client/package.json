@@ -1,0 +1,19 @@
+{
+  "name": "contract-rpc-client",
+  "version": "0.0.1",
+  "description": "contract rpc client",
+  "main": "index.js",
+  "author": "zhangfenglin",
+  "license": "GPL-3.0",
+  "private": true,
+  "dependencies": {
+    "config": "^1.30.0",
+    "jayson": "^2.0.5"
+  },
+  "devDependencies": {
+    "jest": "^22.4.3"
+  },
+  "scripts": {
+    "test": "jest"
+  }
+}
