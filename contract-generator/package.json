@@ -1,0 +1,17 @@
+{
+  "dependencies": {
+    "ejs": "^2.5.9",
+    "ramda": "^0.25.0",
+    "sphinx-meta": "/Users/zhangfenglin/Documents/work/sphinx-contracts-build"
+  },
+  "name": "contract-generator",
+  "version": "0.0.1",
+  "description": "contract metadata generater javascript files.",
+  "main": "index.js",
+  "author": "zhangfenglin",
+  "license": "MIT",
+  "private": true,
+  "scripts": {
+    "start": "node index.js"
+  }
+}

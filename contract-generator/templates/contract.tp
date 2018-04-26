@@ -1,0 +1,17 @@
+const {chainCaller} = require('sphinx-contract-rpc-client')
+
+class <%=name%> {<% for (var i = 0; i < abi.length; i++) {%>
+  <% var item = abi[i] %><%if (item.type == 'function') {%>
+  /**<% if (item.constant == true) {%>
+  * This is a get function<%} else {%>
+  * This is a post function<%}%><% if (item.inputs.length == 0 && item.constant == true) {%>
+  * ! @param empty<%} else {%><% for (var j = 0; j < item.inputs.length; j++){%>
+  * ! @param {<%=item.inputs[j].type%>} <% if (item.inputs[j].name == '') {%>arg<%=j%><%} else {%><%=item.inputs[j].name%><%} %> <%}%><%} %><% if (item.constant == false) {%>
+  * ! @param {address} _from<%} %>
+  */
+  <%=item.name%>(<% for (var k = 0; k < item.inputs.length; k++) {%><% if (k > 0) {%>, <%} %><% if (item.inputs[k].name == '') {%>_arg<%=k%><%} else {%><%=item.inputs[k].name%><%}%><%} %><% if (item.constant == false){%><% if (item.inputs.length > 0) {%>, <%} %>_from<%} %>) {
+    return chainCaller('<%=name%>', '<%=item.name%>'<% for (var k = 0; k < item.inputs.length; k++) {%><% if (item.inputs[k].name == '') {%>, arg<%=k%><%} else {%>, <%=item.inputs[k].name%><%} %><%} %><% if (item.constant == false){%>, _from<%} %>)
+  } <%}%><%}%>
+}
+
+module.exports = <%=name%>
