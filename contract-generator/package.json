@@ -1,5 +1,6 @@
 {
   "dependencies": {
+    "config": "^1.30.0",
     "ejs": "^2.5.9",
     "ramda": "^0.25.0",
     "sphinx-meta": "/Users/zhangfenglin/Documents/work/sphinx-contracts-build"

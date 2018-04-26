@@ -10,12 +10,12 @@ class MetaAnalyzer {
     this.contractABIs = []
   }
 
-  start() {
+  start(network = 'privatenet') {
     log('start analyze')
 
-    const rootPath = contractMeta.rootPath('privatenet')
+    const rootPath = contractMeta.rootPath(network)
     const files = fs.readdirSync(rootPath)
-    log(rootPath)
+
     const meta = files.map((file) => {
       return require(path.join(rootPath, file))
     })
@@ -29,6 +29,7 @@ class MetaAnalyzer {
             list.push(abi)
           }
         })
+
         if (list.length > 0) {
           this.contractABIs.push({
             contractName: element.contractName,
@@ -37,6 +38,8 @@ class MetaAnalyzer {
         }
       }
     })
+
+    log('analyze finish!')
   }
 
   getABIs() {

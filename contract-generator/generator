@@ -1,0 +1,11 @@
+#! /bin/bash
+
+rm -rf code-dest
+
+if [ $1 ]; then
+  echo "current network { $1 }"
+  node index.js $1
+else
+  echo 'not found network, use privatenet to network'
+  node index.js privatenet
+fi
